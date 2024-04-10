@@ -103,7 +103,6 @@
                     transform: translate(-50%, -50%);
                     width: 70%;
                     height: 70%;
-
                 }
             }
         }
@@ -151,6 +150,10 @@
                         text-align: left;
                         font-style: normal;
                         align-self: flex-start;
+                        animation-name: apper;
+                        animation-duration: 6s;
+                        animation-direction: normal;
+                        animation-fill-mode:backwards;
                     }
                     .design-text-subtitle{
                         font-family: "Poppins", sans-serif;
@@ -165,6 +168,24 @@
         }
 
     }
+}
+
+@keyframes apper{
+    10%{
+        opacity: 0;
+        transform: translatey(50%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+#item{
+    transition: transform 0.5s ease;
+}
+
+.contenedor-design:hover{
+    filter: opacity(0.9);
+    transform: scale(1.04);
 }
 
 @media (min-width: 618px){
